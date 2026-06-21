@@ -1,0 +1,51 @@
+<h2>Add Plot</h2>
+
+<div>
+  Plot Number:
+  <input type="text" [(ngModel)]="formPlot.plotNumber" name="plotNumber">
+</div>
+<br>
+<div>
+  Owner Name:
+  <input type="text" [(ngModel)]="formPlot.ownerName" name="ownerName">
+</div>
+<br>
+<div>
+  Area:
+  <input type="number" [(ngModel)]="formPlot.area" name="area">
+</div>
+<br>
+<div>
+  Price:
+  <input type="number" [(ngModel)]="formPlot.price" name="price">
+</div>
+<br>
+<div>
+  Status:
+  <select [(ngModel)]="formPlot.status" name="status">
+    <option>AVAILABLE</option>
+    <option>RESERVED</option>
+    <option>SOLD</option>
+  </select>
+</div>
+<br>
+<div>
+  Facing:
+  <select [(ngModel)]="formPlot.facing" name="facing">
+    <option>NORTH</option>
+    <option>SOUTH</option>
+    <option>EAST</option>
+    <option>WEST</option>
+  </select>
+</div>
+<br>
+
+<button (click)="savePlot()">
+    {{ plot ? 'Update Plot' : 'Add Plot' }}
+</button>
+
+<button style="margin-left: 10px;" (click)="cancel()">Cancel </button>
+
+<h2>Selected Plot</h2>
+
+{{ plot | json }}

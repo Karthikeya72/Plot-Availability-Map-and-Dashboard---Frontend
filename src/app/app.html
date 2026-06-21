@@ -1,7 +1,8 @@
-<h2>Projects</h2>
+<app-plot-list
+    (editClicked)="selectedPlot = $event">
+</app-plot-list>
 
-<ul>
-  <li *ngFor="let p of projects">
-    {{ p.name }} - {{ p.location }}
-  </li>
-</ul>
+<app-add-plot
+    [plot]="selectedPlot"
+    (cancelEdit)="selectedPlot = undefined">
+</app-add-plot>

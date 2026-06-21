@@ -6,11 +6,11 @@ import { Injectable } from '@angular/core';
 })
 export class ProjectService {
 
-  private apiUrl = 'http://localhost:8080/api/projects';
+  // private apiUrl = 'http://localhost:8080/api/projects';
 
   constructor(private http: HttpClient) {}
 
   getProjects() {
-    return this.http.get<any[]>(this.apiUrl);
+    // return this.http.get<any[]>(this.apiUrl);
   }
 }
