@@ -1,0 +1,35 @@
+<h2>Plots</h2>
+<h2>Total Plots: {{plots.length}}</h2>
+
+<table border="1">
+
+  <thead>
+    <tr>
+      <th>Plot No</th>
+      <th>Owner</th>
+      <th>Area</th>
+      <th>Price</th>
+      <th>Status</th>
+      <th>Facing</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr *ngFor="let plot of plots">
+
+      <td>{{plot.plotNumber}}</td>
+      <td>{{plot.ownerName}}</td>
+      <td>{{plot.area}}</td>
+      <td>{{plot.price}}</td>
+      <td>{{plot.status}}</td>
+      <td>{{plot.facing}}</td>
+
+    <td>
+    <button (click)="editPlot(plot)">Edit</button>
+    <button (click)="deletePlot(plot.id!)">Delete</button>
+  </td>
+    
+    </tr>
+  </tbody>
+
+</table>
